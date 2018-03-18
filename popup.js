@@ -12,6 +12,23 @@ var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5
 var downloadSize = 4995374; //bytes
 
 /**
+* Работа со свойством {@link $msg}
+*
+* Если аргумент определен, то устанавливается новое
+* значение свойства msg
+* (отслеживание пргресса проверки скорости)
+*
+* @param string $msg сообщение
+*/
+function showProgressMessage(msg) {
+    
+    /**
+    *Обработчик, позволяющий взаимодействовать с элементом HTML страницы с ID=progress
+    */
+    var oProgress = document.getElementById("progress");
+}
+
+/**
 * Функция, которая фиксирует время завершения загрузки изображения
 */
 function measureConnectionSpeed() {
@@ -42,6 +59,7 @@ function measureConnectionSpeed() {
     * Обработчик ошибки загрузки изображения
     */
     download.onerror = function (err, msg) {
-        ShowProgressMessage("Invalid image, or error downloading");
+        showProgressMessage("Invalid image, or error downloading");
     }
 }
+
