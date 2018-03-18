@@ -26,6 +26,9 @@ function showProgressMessage(msg) {
     *Обработчик, позволяющий взаимодействовать с элементом HTML страницы с ID=progress
     */
     var oProgress = document.getElementById("progress");
+	if (oProgress) {
+        oProgress.innerHTML = msg;
+    }
 }
 
 /**
