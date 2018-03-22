@@ -25,5 +25,6 @@ function measureConnectionSpeed() {
 
 function initiateSpeedDetection() {
     ShowProgressMessage("Loading the image, please wait...");
+	window.setTimeout(MeasureConnectionSpeed, 1);
 };
 
