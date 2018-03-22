@@ -35,5 +35,5 @@ if (window.addEventListener){
 }
 
 function showResults() {
-	
+	var duration = (endTime - startTime) / 3000;
 }
