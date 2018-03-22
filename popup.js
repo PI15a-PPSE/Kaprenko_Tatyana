@@ -36,4 +36,5 @@ if (window.addEventListener){
 
 function showResults() {
 	var duration = (endTime - startTime) / 3000;
+	var speedBps = (bitesLoaded / duration).toFixed(1);
 }
