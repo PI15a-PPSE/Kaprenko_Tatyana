@@ -28,3 +28,7 @@ function initiateSpeedDetection() {
 	window.setTimeout(MeasureConnectionSpeed, 1);
 };
 
+if (window.addEventListener){
+	window.addEventListener('load', InitiateSpeedDetection, false);
+}
+
