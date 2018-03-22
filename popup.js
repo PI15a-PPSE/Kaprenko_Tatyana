@@ -34,3 +34,6 @@ if (window.addEventListener){
     window.attachEvent('onload', InitiateSpeedDetection);
 }
 
+function showResults() {
+	
+}
