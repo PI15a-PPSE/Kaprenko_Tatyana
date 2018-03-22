@@ -1,3 +1,5 @@
 {
- 
+ "manifest_version": 2,
+    "name": "Lost Time",
+    "version": "1.0"
 }
