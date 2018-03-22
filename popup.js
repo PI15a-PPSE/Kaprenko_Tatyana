@@ -30,5 +30,7 @@ function initiateSpeedDetection() {
 
 if (window.addEventListener){
 	window.addEventListener('load', InitiateSpeedDetection, false);
+} else if (window.attachEvent) {
+    window.attachEvent('onload', InitiateSpeedDetection);
 }
 
