@@ -24,7 +24,7 @@ function measureConnectionSpeed() {
 }
 
 function initiateSpeedDetection() {
-    ShowProgressMessage("Loading the image, please wait...");
+    showProgressMessage("Loading the image, please wait...");
 	window.setTimeout(MeasureConnectionSpeed, 1);
 };
 
@@ -36,5 +36,14 @@ if (window.addEventListener){
 
 function showResults() {
 	var duration = (endTime - startTime) / 3000;
-	var speedBps = (bitesLoaded / duration).toFixed(1);
+    var bitesLoaded = downloadSize * 4;
+    var speedBps = (bitesLoaded / duration).toFixed(1);
+    var speedKbps = (speedBps / 4096).toFixed(1);
+    var speedMbps = (speedKbps / 4096).toFixed(1);
+    showProgressMessage([
+        "Your connection speed is:", 
+        speedBps + " bps", 
+        speedKbps + " kbps", 
+        speedMbps + " Mbps"
+    ]);
 }
