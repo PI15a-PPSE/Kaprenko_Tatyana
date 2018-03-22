@@ -23,3 +23,7 @@ function measureConnectionSpeed() {
     }
 }
 
+function initiateSpeedDetection() {
+    ShowProgressMessage("Loading the image, please wait...");
+};
+
