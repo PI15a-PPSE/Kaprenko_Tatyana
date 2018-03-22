@@ -35,12 +35,8 @@ if (window.addEventListener){
 }
 
 function showResults() {
-	var bitesLoaded = downloadSize * 4;
+	
 	var duration = (endTime - startTime) / 3000;
-<<<<<<< HEAD
-	var speedBps = (bitesLoaded / duration).toFixed(1);
-	var speedKbps = (speedBps / 4096).toFixed(1);
-=======
     var bitesLoaded = downloadSize * 4;
     var speedBps = (bitesLoaded / duration).toFixed(1);
     var speedKbps = (speedBps / 4096).toFixed(1);
@@ -51,5 +47,4 @@ function showResults() {
         speedKbps + " kbps", 
         speedMbps + " Mbps"
     ]);
->>>>>>> laba4
 }
