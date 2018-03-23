@@ -4,15 +4,15 @@ var downloadSize = 4995374; //bytes
 
 function showProgressMessage(msg) {
     var oProgress = document.getElementById("progress");
-	if (oProgress) {
+    if (oProgress) {
         oProgress.innerHTML = msg;
     }
 }
 
 
 function measureConnectionSpeed() {
-    var startTime;
     var endTime;
+    var startTime;
     var download = new Image();
     download.onload = function () {
         endTime = (new Date()).getTime();
@@ -25,18 +25,17 @@ function measureConnectionSpeed() {
 
 function initiateSpeedDetection() {
     showProgressMessage("Loading the image, please wait...");
-	window.setTimeout(MeasureConnectionSpeed, 1);
+    window.setTimeout(measureConnectionSpeed, 1);
 };
 
 if (window.addEventListener){
-	window.addEventListener('load', InitiateSpeedDetection, false);
+    window.addEventListener('load', initiateSpeedDetection, false);
 } else if (window.attachEvent) {
-    window.attachEvent('onload', InitiateSpeedDetection);
+    window.attachEvent('onload', initiateSpeedDetection);
 }
 
 function showResults() {
-	
-	var duration = (endTime - startTime) / 3000;
+    var duration = (endTime - startTime) / 3000;
     var bitesLoaded = downloadSize * 4;
     var speedBps = (bitesLoaded / duration).toFixed(1);
     var speedKbps = (speedBps / 4096).toFixed(1);
